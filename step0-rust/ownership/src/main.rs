@@ -3,6 +3,8 @@ fn main() {
     iter_vec();
     tuple_struct();
     match_fn();
+    let a1 = A::Some(B::Some(55));
+    foo2(a1);
 }
 
 fn foo() {
@@ -84,5 +86,47 @@ fn match_fn() {
     match x {
         // r is reference type
         ref r => println!("Of type &i32: {}", r),
+    }
+
+    let mut y = 5;
+    match y {
+        ref r if y == 5 => println!("{r}"),
+        ref mut r => *r *= 5,
+    }
+    println!("update info {y}");
+
+    let mut v = vec![1, 2, 3];
+    while let Some(x) = v.pop() {
+        println!("{}", x);
+    }
+}
+
+#[derive(Debug)]
+enum A {
+    None,
+    Some(B),
+}
+#[derive(Debug)]
+enum B {
+    None,
+    Some(i32),
+}
+
+fn foo2(x: A) {
+    match x {
+        a @ A::None => println!("a is A::{:?}", a),
+        ref a @ A::Some(B::None) => println!("a is A::{:?}", *a),
+        /* 
+        所有权在A 此时b1 可获取 B类型所有权 或 引用
+        A::Some(b1 @ B::Some(_)) => println!("b1 is B::{:?}", b1),
+        A::Some(ref b1 @ B::Some(_)) => println!("b1 is B::{:?}", b1),
+        */
+        /*
+        ref d @ A::Some(ref b1 @ B::Some(_)) => println!("d is A::{:?}, b1 is B::{:?}", d, b1),
+
+        */
+        ref d @ A::Some(ref b1 @ B::Some(_)) => println!("d is A::{:?}, b1 is B::{:?}", d, b1),
+
+        // ref c @ A::Some(ref b @ B::Some(_)) => println!("B is B::{:?}, A is C::{:?}", b, c),
     }
 }
