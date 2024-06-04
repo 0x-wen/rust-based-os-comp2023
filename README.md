@@ -3,6 +3,11 @@
 Welcome to Open-Source OS Training Comp 2023（欢迎加入2023 年开源操作系统训练营）
 
 ## 重要信息
+- [**第一阶段训练安排**](./2023-autumn-scheduling-1.md) 
+- 2023.10.08：2023 年秋冬季开源操作系统训练营正式启动。
+- 2023.09.30：[2023秋冬季OS训练营培训课表安排](https://docs.qq.com/sheet/DUHZ3anNKUW53TXdL?tab=000001) 。
+
+## 以往信息
 - 2023.04.01：2023 年春夏季开源操作系统训练营正式启动。
 - 2023.03.23：请参加的同学填写[训练营报名登记表](http://chyyyuuu.mikecrm.com/2zxG8dp)，并加入[相关微信群](./2023os2train.jpg)。
 - 2023.03.19: 2023 年春夏季开源操作系统训练营启动&报名交流会，会议时间：2023/03/25 11:00-12:00 ，#腾讯会议号：231-190-126 会议密码：0325。请报名的同学参加。
@@ -33,11 +38,8 @@ Welcome to Open-Source OS Training Comp 2023（欢迎加入2023 年开源操作�
 - 李明 微信id：limingth
 
 ## 助教
-- 贾越凯 微信id：equation314
-- 田凯夫 微信id：tkf15944806118
-- 闭浩扬 微信id：scpointer
-- 杨金博 微信id：yangjinbo2000
 - 朱  懿 微信id：ZhiyuanSue
+- 闭浩扬 微信id：scpointer
 
 ## 技术指导委员会
 
